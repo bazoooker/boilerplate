@@ -1,0 +1,55 @@
+.hero {
+
+}
+
+
+.hero__slide {
+
+	.container {
+		position: relative;
+		&::after {
+			@include pseudo;
+			right: -15.5%;
+			top: 0%;
+			width: 100%;
+			height: 100%;
+			background-size: 950px;
+			background-position: 100% 55%;
+			background-image: url(/img/bg/bg-hero-cta.png);	
+			background-repeat: no-repeat;
+		}
+	}
+
+}
+
+.hero__cta {
+	// background-color: #fff;
+	z-index: 2;
+	min-width: 30rem;
+	margin: 0 10rem 6rem 0;
+
+	p {
+		color: #fff;
+		line-height: 140%;
+		margin: 0;
+	}
+}
+
+.hero__duration {
+	display: block;
+	color: #000;
+
+	font-size: 1.8rem;
+	font-weight: 600;
+	line-height: 140%;
+	margin: 0;
+}
+
+.hero__offer1 {
+	font-size: 2.4rem;
+			font-weight: 900;
+}
+.hero__offer2 {
+	font-size: 4.8rem;
+			font-weight: 900;
+}

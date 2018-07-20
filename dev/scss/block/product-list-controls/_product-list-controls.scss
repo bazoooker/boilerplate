@@ -1,0 +1,4 @@
+.product-list-controls {
+	@include flex-row(nowrap, space-between, center);
+	margin: 0 0 2rem 0;
+}

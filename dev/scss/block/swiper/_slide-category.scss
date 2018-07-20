@@ -1,0 +1,14 @@
+.slide-category {
+	height: 24rem;
+	@include flex-col(nowrap, space-between, flex-start);
+}
+.slide-category_single {
+
+
+
+}
+.slide-category_double {
+
+}
+.slide-category_img-size-s {}
+.slide-category_img-bg {}

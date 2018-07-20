@@ -1,0 +1,27 @@
+.brand-select {
+	@include flex-row(nowrap, space-between, stretch);
+	// border-radius: 6px;
+    // overflow: hidden;
+    padding: 4px;
+    border-radius: 6px;
+
+    background-color: #fff;
+
+	button {
+		background-color: gray;
+	    border: 0;
+	    outline: 0;
+	    padding: 0 2.8rem;
+	    border-radius: 6px;
+	    color: #fff;
+	    font-size: 1.4rem;
+	    cursor: pointer;
+	    transition: $tr;
+	    &:hover {
+	    	background-color: $color_main-b;
+	    }
+	}
+}
+
+.brand-select__select {
+}

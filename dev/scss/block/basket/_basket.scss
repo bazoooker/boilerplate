@@ -1,0 +1,67 @@
+.basket {
+	position: relative;
+	height: 100%;
+	cursor: pointer;
+
+	@include flex-row(nowrap, space-between, center);
+
+	padding: 0 0 0 6rem;
+
+	text-decoration: none;
+
+	&:hover {
+		.basket__price {
+			color: $color_main-r;
+		}
+
+		&:before {
+			transform: translateY(-50%) rotate(60deg);
+			
+		}
+	}
+
+	&::before {
+		@include pseudo;
+
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 4.7rem;
+		width: 5.3rem;
+		background-image: url(/img/icons/i-octagon.png);
+		@include bg-contain;
+
+		transition: $tr;
+	}
+
+	&::after {
+		@include pseudo;
+
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 4.7rem;
+		width: 4.9rem;
+		background-image: url(/img/icons/i-cart.png);
+		background-size: 2.2rem;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+
+		transition: $tr;
+	}
+}
+.basket__contents {
+	display: block;
+	flex: 1 1 100%;
+	// color: #8f8f8f;
+	font-size: 1.4rem;
+	line-height: 120%;
+}
+.basket__price {
+	display: block;
+	flex: 1 1 100%;
+	font-size: 1.8rem;
+	font-weight: 600;
+	line-height: 120%;
+	transition: $tr;
+}

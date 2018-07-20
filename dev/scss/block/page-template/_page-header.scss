@@ -1,0 +1,27 @@
+.page-header {
+}
+
+.page-header__top-bar {
+	position: relative;
+	height: 4rem;
+	margin-bottom: 10px;
+
+	border-bottom: 1px solid #efeff0;
+	background-image: url(/img/bg/bg-topmenu.png);
+	@include bg-cover;
+
+	font-size: 1.3rem;
+
+	.container {
+		@include flex-row(nowrap,space-between,center);
+	}
+}
+
+.page-header__content {
+	padding: 3.1rem 0 5.5rem 0;
+
+	.container {
+		position: relative;
+		@include flex-row(nowrap, space-between,center);
+	}
+}

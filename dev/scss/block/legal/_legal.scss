@@ -1,0 +1,22 @@
+.legal {
+	background-color: #3a393a;
+	padding: 3rem 0;
+
+	.container {
+		@include flex-row(nowrap, space-between, center);
+	}
+}
+
+.legal__policy {
+	margin: 0;
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 400;
+
+	a {
+		color: #fff;
+		opacity: .95;
+		font-size: 1.4rem;
+		font-weight: 300;
+	}
+}

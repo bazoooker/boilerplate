@@ -1,0 +1,398 @@
+.btn {
+	display: inline-block;
+	position: relative;	
+	overflow: hidden;
+	font-size: 1.1rem;
+	line-height: 1.5rem;
+	text-decoration: none;
+	font-weight: 600;
+	// background-color: $color_main-b;
+	padding: 1rem 1rem;
+	cursor: pointer;
+	
+	&:visited {
+	
+	}
+
+}
+
+.btn_add-to-cart {
+	position: relative;
+	flex: 1 1 50%;
+	text-align: center;
+	border: 2px solid $color_main;
+	padding: .8rem .8rem .8rem 4.5rem;
+	
+	text-transform: uppercase;
+	color: $color_main;
+
+	line-height: 2.2rem;
+
+	transition: $tr;
+
+
+	&:visited {color: $color_main;}
+	&:active {color: $color_main;}
+
+	&::before {
+		@include pseudo;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 3.7rem;
+		background-color: $color_main;
+	}
+
+	&::after {
+		@include pseudo;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 3.7rem;
+		background-image: url(/img/icons/i-cart.png);
+		background-size: 1.7rem;
+		background-repeat: no-repeat;
+		background-position: 40% 50%;
+
+		transition: $tr;
+	}
+
+	&:hover::after {
+		transform: scale(1.2);
+	}
+
+	// &:hover::before {
+	// 	background-color: #fff;
+	// }
+	// &:hover::after {
+	// 	background-color: #fff;
+	// 	background-image: url(/img/icons/i-cart_orange.png);
+	// 	background-position: 70% 50%;
+	// }
+}
+
+.btn_one-click {
+	flex: 1 1 50%;
+
+	@include flex-row(nowrap, flex-start, center);
+	background-color: transparent;
+
+	padding: .8rem .8rem .8rem .8rem;
+	border: 2px solid transparent;
+	line-height: 1.8rem;
+	transition: $tr;
+
+	font-size: 1.1rem;
+	text-transform: uppercase;
+
+	&:visited span {color: #514f53;}
+	&:active span {color: #514f53;}
+
+
+	span {
+		display: inline-block;
+		margin: 0 auto;
+		position: relative;
+
+		font-size: 1.2rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: #514f53;
+		transition: $tr;
+
+
+
+		&::before {
+			@include pseudo;
+			width: 100%;
+			height: 1px;
+			left: 0;
+			bottom: -.5rem;
+			background-color: $color_font;
+			background-color: rgba(0,0,0,.1);
+		}
+	}
+
+	&:hover span::before {
+		display: none;
+	}
+	&:hover span {
+		color: #000;
+	}
+	&:hover {
+		background-color: #eaeaea;
+	}
+
+}
+
+
+.btn_outline {
+	background-color: transparent;
+	border: 2px solid #e3e3e3;
+	color: $color_font;
+
+	transition: $tr;
+
+	&:visited,
+	&:active {
+		color: $color_font;
+	}
+
+	&:hover {
+		background-color: #e3e3e3;
+		color: #3e3d3d;
+	}
+
+}
+
+.btn-burger {
+	margin: 0 1.2rem 0 0;
+    float: left;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: 200ms;
+
+    
+}
+
+.btn-burger__bar {
+	position: relative;
+	width: 1.75rem;
+    height: 2px;
+    margin-bottom: .4rem;
+    background-color: #fff;
+    background-color: rgba(255,255,255,.6);
+    transition: $tr;
+    transform-origin: center, center;
+
+    	&:nth-child(1):after {
+    		transition-delay: 100ms;
+    	}
+    	&:nth-child(2):after {
+    		transition-delay: 200ms;
+    	}
+    	&:nth-child(3):after {
+    		transition-delay: 300ms;
+    	}
+
+    &:after {
+    	@include pseudo;
+    	top: 0;
+    	left: 0;
+    	width: 0%;
+    	height: 100%;
+    	background-color: #fff;
+    	z-index: 4;
+
+    	transition: $tr;
+    }
+}
+
+.btn_metal {
+	position: relative;
+    background-image: url(/img/bg/bg-btn.jpg);
+    padding: 1rem 3.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 400;
+
+    &:visited,
+	&:active {
+		color: #fff;
+	}
+
+    &:hover::after {
+    	height: 100%;
+    }
+
+    &::after {
+    	@include pseudo;
+    	left: 0;
+    	top: 0;
+    	width: 100%;
+    	height: 0%;
+    	background-color: rgba(255,255,255,.3);
+
+    	transition: $tr;
+    }
+}
+
+
+
+
+
+
+
+// ======================================================
+
+
+
+
+
+
+
+
+
+
+
+
+.btn_outline-white {
+	background-color: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+
+	&:visited,
+	&:active {
+		color: #fff;
+	}
+
+	&:hover {
+		color: $color_main-b;
+		background-color: #fff;
+		border: 1px solid transparent;
+	}
+}
+
+input.btn {
+	border: 0;
+	outline: none;
+}
+
+.btn_buy {
+    background-image: url(/img/icons/cart-glyph.png);
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    // border: 1px solid #1837a5;
+    height: 26px;
+    flex: 0 0 30px;
+    padding: 0;
+    margin: 0 3px 0 0;
+
+    &:hover {
+    	// border: 1px solid $color_main-r;
+    	background-color: $color_main-r;
+    	// background-image: url(/img/icons/cart-glyph_blue.png);
+    }
+}
+
+
+
+.btn-catalog {
+	position: relative;
+	flex: 0 0 19.2rem;
+	padding: 0 2.5rem 0 0;
+	height: 100%;
+	@include flex-row(nowrap, space-between, center);
+	
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 600;
+	text-decoration: none;
+
+	&:visited,
+	&:active {color: #fff;}
+
+	&:before {
+		@include pseudo;
+	    right: 0;
+	    top: 48%;
+	    transform: translateY(-50%) rotate(45deg);
+	    width: .6rem;
+	    height: .6rem;
+	    background: transparent;
+	    border-bottom: 2px solid #fff;
+	    border-right: 2px solid #fff;
+	}
+}
+
+
+
+.btn-catalog-brand {
+	position: relative;
+	flex: 0 0 20.3rem;
+	height: 100%;
+	padding: 0 0 0 3.8rem;
+	color: #fff;
+	text-decoration: none;
+	@include flex-row(nowrap, space-between, center);
+
+	&:visited,
+	&:active {color: #fff;}
+
+	&:before {
+		@include pseudo;
+	    left: 0;
+	    top: 48%;
+	    width: 2.5rem;
+	    height: 2.5rem;
+	    background-image: url(/img/icons/catalog.png);
+	    transform: translateY(-50%);
+	    @include bg-contain;
+	}
+}
+
+.btn_download {
+    display: inline-block;
+    margin: 0 .5rem .5rem 0;
+    position: relative;
+    padding: 1rem;
+    text-decoration: none;
+    padding-left: 0;
+    padding: 2rem;
+    color: #ffffff;
+    -webkit-transition: 200ms;
+    -o-transition: 200ms;
+    text-decoration: underline;
+    /* background: #2987bf; */
+    background: url(/img/icons/i-download.png) #25af69 no-repeat;
+    background-size: 2rem;
+    background-position: 1.5rem center;
+    padding: 1rem 2rem 1rem 5rem;
+    text-decoration: none;
+
+    &:visited,
+    &:active,
+    &:focus {
+    	color: #ffffff;
+    }
+}
+
+.btn_back {
+    background-image: url(/img/icons/i-arrow-left_white.png);
+    background-repeat: no-repeat;
+    background-size: 1.9rem;
+    background-position: 15px center;
+    padding-left: 50px;
+    line-height: 150%;
+    transition: 200ms;
+    padding: .4rem 1.8rem .4rem 4.5rem;
+    font-size: 1.4rem;
+
+    &:visited,
+    &:active,
+    &:focus {
+    	color: #ffffff;
+    }
+
+    &:hover {
+    	background-position: 10px center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+	.btn,
+	.btn_download {
+		font-size: 1.6rem;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.btn,
+	.btn_download {
+		font-size: 1.5rem;
+		line-height: 1.8rem;
+	}
+}

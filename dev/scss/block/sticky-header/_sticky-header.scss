@@ -1,0 +1,73 @@
+.sticky-header {
+	display: none;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 4.4rem;
+	padding: .2rem 0;
+
+	background-color: #fff;
+	box-shadow: 0px 0px 15px 1px rgba(0,0,0,.2);
+	z-index: 9;
+
+	// padding: 3.1rem 0 5.5rem 0;
+
+	.container {
+		position: relative;
+		@include flex-row(nowrap, space-between,center);
+		height: 100%; /*IE*/
+
+		.logo {
+			width: 10rem;
+			height: 4rem;
+		}
+
+		.company-info {
+			flex: 0 0 25rem;
+			@include flex-row(nowrap, center, center);
+
+			.location {
+				flex: 1 1 30%;
+				opacity: .3;
+			}
+			.phone {
+				flex: 1 1 70%;
+
+				&:hover {
+					color: $color_main;
+				}
+			}
+
+		}
+
+		.basket {
+
+			&::before {
+				height: 3.4rem;
+			}
+			&::after {
+				height: 3.4rem;
+				background-size: 1.6rem;
+			}
+		}
+
+		.basket__contents {
+			font-size: 1.2rem;
+		}
+		.basket__price {
+			font-size: 1.5rem;
+		}
+	}
+
+	#progress {
+		position: absolute;
+	    bottom: 0px;
+	    left: 0;
+	    width: 0%;
+	    height: 2px;
+	    background-color: $color_main;
+	}
+}

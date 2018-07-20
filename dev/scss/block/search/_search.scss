@@ -1,0 +1,16 @@
+.search {
+	position: relative;
+	flex: 0 1 36rem;
+	margin: 0 5rem 0 0;
+
+	&::after {
+		@include pseudo;
+		width: 2rem;
+		height: 2rem;
+		right: 1rem;
+		top: 50%;
+		transform: translateY(-50%);
+		background-image: url(/img/icons/i-search.png);
+		@include bg-contain;
+	}
+}

@@ -1,0 +1,82 @@
+
+.logo {
+	display: inline-block;
+	flex: 0 0 27.3rem;
+	height: 7.6rem;
+	margin: 0 3rem 0 0;
+	text-decoration: none;
+	
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+	transition: 100ms;
+	background-image: url(/img/logo_no-roof.jpg); 
+	@include bg-contain;
+
+	&.logo_filled {
+		position: relative;
+		background-image: url(/img/logo-filled_noroof.png); 
+
+		&:after {
+			@include pseudo;
+			width: 7.3rem;
+			height: 7.3rem;
+			left: -.2rem;
+    		top: -2.2rem;
+			border-radius: 50%;
+			background-image: url(/img/logo-filled_roof.png); 
+			@include bg-contain;
+
+
+			transition: 500ms;
+		}
+
+			&:hover:after {
+				transform: translateY(-3px);
+			}
+	}
+
+	&.logo_static {
+		background-image: url(/img/logo.jpg); 
+	}
+}
+
+
+.logo.animated {
+	position: relative;
+	display: inline-block;
+	flex: 0 1 27.3rem;
+	height: 7.5rem;
+	margin: 0 3rem 0 0;
+	text-decoration: none;
+	
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+	transition: 100ms;
+	background-image: url(/img/logo_no-roof.jpg); 
+	@include bg-contain;
+
+	&:hover:after {
+		// animation: anim-logo .3s ease;
+		transform: translateY(-3px);
+	}
+	
+	&:after {
+		@include pseudo;
+		width: 7.3rem;
+		height: 7.3rem;
+		left: -.9rem;
+		top: -1.9rem;
+		border-radius: 50%;
+		background-image: url(/img/logo_roof.png); 
+		@include bg-contain;
+
+
+		transition: 500ms;
+	}
+
+}
+
+
+

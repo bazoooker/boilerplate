@@ -1,0 +1,104 @@
+.user-options {
+	margin-left: auto;
+	height: 100%;
+	@include flex-row(nowrap,space-between,center);
+}
+
+
+
+
+.user-options__group {
+	margin: 0 7rem 0 0;
+
+	&::last-child {
+		margin: 0 0 0 0;
+	}
+}
+
+
+
+
+
+.user-options__link {
+	position: relative;	
+
+	text-decoration: none;
+	cursor: pointer;
+
+	transition: $tr;
+
+
+	&:before  {
+		@include pseudo;
+		left: .6rem;
+		top: 50%;
+		transform: translateY(-50%);
+		background-size: 17px;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		@include bg-contain;
+
+		transition: $tr;
+	}
+
+	&::after {
+		@include pseudo;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		bottom: -.2rem;
+		background-color: $color_font;
+		opacity: 0;
+
+		transform: translateY(-4px);
+		transition: $tr;
+	}
+
+	&:hover {
+		color: $color_main;
+	}
+	
+	&:hover::before {
+		transform: translateY(-60%);
+	}
+
+	// &:hover::after {
+	// 	opacity: .15;
+	// 	transform: translateY(0);
+	// }
+}
+
+
+
+
+.user-options__cabinet {
+	padding: 1.2rem .9rem 1.2rem 3.2rem;
+
+	&::before {
+		width: 1.8rem;
+		height: 1.7rem;
+		background-image: url(/img/icons/i-person.png);
+		
+	}
+}
+.user-options__compare {
+	padding: 1.2rem .9rem 1.2rem 3.6rem;
+
+	&::before {
+		width: 2.4rem;
+		height: 2.2rem;
+		background-image: url(/img/icons/i-compare.png);
+	}
+}
+.user-options__postponed{
+	padding: 1.2rem .9rem 1.2rem 3.2rem;
+
+	&::before {
+		width: 1.9rem;
+		height: 1.9rem;
+		background-image: url(/img/icons/i-heart.png);
+	}
+}
+.user-options__signup {
+	padding: 1.2rem .9rem 1.2rem .9rem;
+}

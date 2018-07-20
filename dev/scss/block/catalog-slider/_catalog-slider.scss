@@ -1,0 +1,23 @@
+.catalog-slider {
+	.container {
+		position: relative;
+
+		.swiper-button-next {
+			right: -2.5rem;
+			background: url(/img/icons/arrow-right.png);
+			@include bg-contain;
+		}
+
+		.swiper-button-prev {
+			left: -2.5rem;
+			background: url(/img/icons/arrow-left.png);
+			@include bg-contain;
+		}
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			width: 1.7rem;
+			height: 2.9rem;
+		}
+	}
+}

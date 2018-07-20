@@ -1,0 +1,202 @@
+html {
+    font-size: 62.5%;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 400;
+    letter-spacing: .3px;
+    color: #323232;
+}
+body {
+    font-size: 1.4rem;
+}
+h1 {
+    font-size: 3.1rem;
+    line-height: 100%;
+    font-weight: 300;
+    color: $color_main-b;
+    margin: 0 0 $gutter 0;
+}
+h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: $color_font;
+    margin: 0 0 $gutter 0;
+}
+
+// .page-content_inner {
+//     h2 {
+//         margin: 0 0 1rem 0;
+//     }
+// }
+
+h3 {
+    font-size: 2.2rem;
+    color: $color_main-b;
+    font-weight: 600;
+    margin: 0 0 $gutter 0;
+}
+    
+section {
+    // background-color: #fff;
+    h1:first-child, h2:first-child, h3:first-child {
+        margin-top: 0;
+    }
+}
+p, span, ul, li, button {
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 100%;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    &:empty {
+        display: none;
+    }
+}
+
+a {
+    color: $color_font;
+    text-decoration: underline;
+}
+    a:hover {
+        text-decoration: none;
+    }
+    a:visited {
+        color: $color_font;
+    }
+    a:focus {
+        color: $color_font;
+    }
+
+table {
+    width: 100%;
+}
+table tr {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    position: relative;
+    ovarflow: hidden;
+    td {
+        padding: .1rem 0rem;
+        border-bottom: 1px solid #e9e9e9;
+    }
+    // &:nth-child(odd) {
+    //     td {
+    //         background-color: li;
+    //     }
+    // }
+    // &:nth-child(even) {
+    //     td {
+    //         background-color: #e3f2ff;
+    //     }
+    // }
+}
+
+ul {
+    padding-left: 1.3rem;
+    margin-left: 0;
+    li {
+        position: relative;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        list-style-image: url(/img/icons/i-list-bullet.png); 
+    }
+}
+
+
+.made-by {
+    color: #fff;
+    font-size: 1.2rem;
+    opacity: .6;
+    margin: 0 0 0 0;
+}
+.e1media-link {
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+    padding: 1.8rem 0 0 0;
+    transition: 400ms;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:after {
+        @include pseudo;
+        top: -10px;
+        opacity: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 4rem;
+        height: 1.4rem;
+
+        background-image: url(/img/logo_roof.png);
+        background-size: 3.5rem;
+        background-repeat: no-repeat;
+        background-position: 50% 25%;
+
+        transition: 300ms;
+    }
+    &:visited {
+        color: #fff;
+    }
+    &:hover {
+        background-position: 50% 0%;
+        color: $color_main;
+        &:after {
+            top: 0;
+            opacity: 1;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 3.3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    h1 {
+        line-height: 3.8rem;
+    }
+    .made-by {
+        float: none;
+    }
+    table tr {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        position: relative;
+        ovarflow-x: scroll;
+        td {
+            padding: .7rem 1rem;
+        }
+    }
+}
+@media screen and (max-width: 569px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 3.4rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    table tr {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        position: relative;
+        ovarflow: hidden;
+        td {
+            padding: .5rem .5rem;
+        }
+    }
+}

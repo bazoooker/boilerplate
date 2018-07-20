@@ -1,0 +1,20 @@
+.brands-slider {
+	.container {
+		position: relative;
+
+		.brands-slider-btn-next {
+			background-image: url(/img/icons/arrow-right.png);
+			@include bg-contain;
+		}
+		.brands-slider-btn-prev {
+			background-image: url(/img/icons/arrow-left.png);
+			@include bg-contain;
+		}
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			width: 1.7rem;
+			height: 2.9rem;
+		}
+	}
+}

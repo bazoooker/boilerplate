@@ -1,0 +1,115 @@
+.slide-content {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+
+	// @include flex-col;
+	aling-items: center;
+	justify-content: flex-start;
+
+	width: 50%;
+	height: 17rem;
+
+	padding: 2.8rem 2rem 2rem 2.5rem;
+	background: $color_main url(/img/bg/bg-bigstar.png) no-repeat;
+	background-position: top right;
+	background-size: contain;
+	color: #fff;
+	// background-color: red;
+
+	&:before {
+		// @include pseudo; 
+		   
+	    height: 100%;
+	    width: 5rem;
+
+	    left: -5rem;	    
+	    top: 0;
+
+	    background-image: url(/img/bg/edge-slider-left.png);
+	    background-size: cover;
+	}
+}
+
+.slide-content__additional {
+	position: absolute;
+	background-color: #000;
+	
+	// @include flex-row;
+	align-items: center;
+	justify-content: flex-end;
+
+	height: 3.3rem;
+	padding: 0 1rem;
+
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	font-weight: -600;
+	color: #fff;
+
+	text-decoration: none;
+}
+
+.slide-content__offer {
+	font-size: 1.3rem;	
+}
+
+.slide-content__additional_top {
+	top: -3.3rem;
+	left: 8rem;
+	&:before {
+		@include pseudo; 
+		   
+	    height: 100%;
+	    width: 1.1rem;
+
+	    left: -1.1rem;	    
+	    top: 0;
+
+	    background-image: url(/img/bg/edge-additional-left.png);
+	    background-size: cover;
+	}
+	&:after {
+		@include pseudo; 
+		   
+	    height: 100%;
+	    width: 1.1rem;
+
+	    right: -1.1rem;	    
+	    top: 0;
+
+	    background-image: url(/img/bg/edge-additional-right.png);
+	    background-size: cover;
+	}
+}
+.slide-content__additional_bottom {
+	bottom: -3.3rem;
+	right: 0;
+	transition: 200ms;
+
+	&:before {
+		@include pseudo; 
+		   
+	    height: 100%;
+	    width: 1.1rem;
+
+	    left: -1.1rem;	    
+	    top: 0;
+
+	    background-image: url(/img/bg/edge-additional-left.png);
+	    background-size: cover;
+	}
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+
+
+.slide-content__offer-heading {
+	font-size: 3rem;
+	font-weight: 900;
+	color: #fff;
+}

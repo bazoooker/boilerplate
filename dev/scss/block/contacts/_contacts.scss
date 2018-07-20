@@ -1,0 +1,17 @@
+.contacts {
+	color: #fff;
+	@include flex-row(nowrap, space-between, flex-start);
+
+	.location {
+		color: #fff;
+	    margin: .6rem 3.7rem 0 0;
+	}
+	.phone {
+		color: #fff;
+		text-align: right;
+	}
+	.phone__city-code {
+		color: #fff;
+		vertical-align: middle;
+	}
+}

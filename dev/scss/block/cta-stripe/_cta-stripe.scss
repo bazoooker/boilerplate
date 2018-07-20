@@ -1,0 +1,44 @@
+.cta-stripe {
+	padding: 2.5rem 0;
+
+	background-color: #7d0909;
+	background-image: url(/img/bg/bg-cta-stripe.jpg);
+	@include bg-cover;
+
+	.container {
+		@include flex-row(nowrap, flex-start, center);
+	}
+}
+.cta-stripe__problem {
+	position: relative;
+	flex: none;
+
+	margin: 0 5.6rem 0 0;
+	padding: 0 0 0 5.5rem;
+
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: #fff;
+
+	&:before {
+		@include pseudo;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 3.8rem;
+		height: 4rem;
+		@include bg-contain;
+	}
+
+
+}
+.cta-stripe__problem_choice {
+	&:before {
+		background-image: url(/img/icons/speech-bubble.png);
+	}
+}
+.cta-stripe__problem_fit {
+	&:before {
+		background-image: url(/img/icons/detail-fit.png);
+	}
+}

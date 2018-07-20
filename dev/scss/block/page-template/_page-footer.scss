@@ -1,0 +1,70 @@
+.page-footer {
+	flex: none;
+	background-color: #1c44a4;
+	background-image: url(/img/bg/bg-footer.jpg);
+	@include bg-cover;
+	padding: 6rem 0;
+	width: 100%;
+
+	.container {
+		@include flex-row(nowrap, space-between, stretch);
+	}
+
+	.nav {
+		@include flex-row(nowrap, flex-start, center);
+		z-index: 2;
+		a {
+			margin: 0 0 0 0;
+			padding: 1.2rem .9rem;
+
+			font-weight: 400;
+			font-size: 1.3rem;
+			color: #fff;
+
+			text-decoration: none;
+
+			cursor: pointer;
+			transition: $tr;
+			
+			&:last-child {
+				margin-right: 0;
+			}
+
+			// &:hover {
+			// 	background-color: gainsboro;
+			// }
+			&.active {
+				font-weight: 600;
+			}
+
+		}
+	}
+
+	.location {
+		color: #fff;
+	}
+
+	.phone,
+	.phone__city-code {
+		color: #fff;
+	}
+}
+
+
+
+
+@media screen and (max-width: 960px) {
+
+}
+
+@media screen and (max-width: 850px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 568px) {
+
+}

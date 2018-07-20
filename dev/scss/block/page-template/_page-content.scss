@@ -1,0 +1,23 @@
+.page-content {
+	flex: 1 0 auto;
+    width: 100%;
+    // overflow-x: hidden;
+
+    // background-color: yellow;
+}
+
+.page-content_stick-top {
+	margin-top: -17.5rem;
+}
+
+
+.page-content_inner {
+	background-image: url(/img/bg/bg-section-shadow.png);
+	background-position: top center;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	h2 {
+		margin: 0 0 .5rem 0;
+	}
+}

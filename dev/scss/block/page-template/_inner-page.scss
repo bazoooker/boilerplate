@@ -1,0 +1,13 @@
+.inner-page {
+	.hero {
+		padding: 2rem 0 2rem 0;
+		height: auto;
+	}
+		
+}
+
+.inner-page__grid {
+	// @include flex-row(wrap, space-between, flex-start);
+	align-items: flex-start;
+	justify-content: space-between;
+}

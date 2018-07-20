@@ -1,0 +1,150 @@
+.product {
+	position: relative;
+	font-size: 1.6rem;
+
+	@include flex-col(nowrap, flex-start, flex-start);
+
+	&::after {
+		@include pseudo;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 2px;	
+		background-image: -webkit-linear-gradient(#BEBEBF 0%, #BEBEBF 10%, transparent 100%);
+		background-image: -o-linear-gradient(#BEBEBF 0%, #BEBEBF 10%, transparent 100%);
+		background-image: linear-gradient(#BEBEBF 0%, #BEBEBF 10%, transparent 100%);
+	}
+}
+
+
+.product_25 {
+	flex: 0 1 24%;
+	max-width: 24%;
+	padding: 1rem 1rem 1rem 1rem;
+
+	margin: 0 1.333% 1rem 0;
+
+	&:last-child { margin: 0 0 1rem 0 }
+
+	// &:nth-child(4n)::after {
+	// 	display: none;
+	// }
+	&:nth-child(4n) {
+		margin-right: 0;
+	}
+}
+.product_33 {
+	flex: 0 1 31.33%;
+	max-width: 31.33%;
+	margin: 0 2% 2rem 0;
+	padding: 1rem 1rem 1rem 1rem;
+
+	&:last-child { margin: 0 0 1rem 0 }	
+
+	// &:nth-child(3n)::after {
+	// 	display: none;
+	// }
+
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+
+.product__img {
+	position: relative;
+	display: block;
+	height: 20rem;
+	width: 100%;
+	@include bg-contain;
+	margin: 0 0 1rem 0;
+	transition: $tr;
+	
+	&:hover::after {
+		height: 4rem;
+		width: 4rem;
+	}
+	&:hover {
+		opacity: .7;
+	}
+
+	&::after {
+		@include pseudo;
+		width: 0;
+		height: 0%;
+		left: 0;
+		top: 0;
+		background-color: rgba(255,255,255,.5);
+		background-image: url(/img/icons/i-search.png);
+		background-size: 2.5rem;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		transition: $tr;
+
+
+	}
+
+}
+.product__name {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #49474b;
+	width: 100%; /*IE*/
+}
+.product__price {
+	font-size: 2.4rem;
+	color: $color_main;
+	font-weight: 600;
+}
+.product__controls {
+	@include flex-row(nowrap,space-between, stretch);
+	width: 100%;
+
+	// align-self: flex-end;
+	margin-top: auto;
+}
+.product__params {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 80px;
+	// height: 7.6rem;
+
+	@include flex-row(wrap, flex-end, flex-end);
+
+	span {
+		display: block;
+		background-color: #777777;
+		color: #fff;
+		text-align: center;
+		font-size: 1.1rem;
+		padding: 1.2rem;
+
+		&:first-child {
+			margin: 0 0 1rem 0;
+		}
+	}
+}
+
+
+
+
+
+.product_fake {
+	@include flex-row(wrap, center, flex-end);
+	font-size: 0;
+
+	p {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: #6f6e70;
+
+		margin: 0 0 2rem 0;
+	}
+
+	&::after {
+		display: none;
+	}
+}
+
+
+
