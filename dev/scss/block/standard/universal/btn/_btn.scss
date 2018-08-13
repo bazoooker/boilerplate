@@ -1,64 +1,160 @@
+
+
+
+
+// block
 .btn {
 	display: inline-block;
 	position: relative;	
 	overflow: hidden;
-	font-size: 1.1rem;
-	line-height: 1.5rem;
 	text-decoration: none;
 	font-weight: 600;
-	// background-color: $color_main-b;
-	padding: 1rem 1rem;
 	cursor: pointer;
-	
-	&:visited {
-	
+	line-height: 100%;
+	border-radius: 5px;
+	transition: $tr;
+	&:hover {
+		text-decoration: none;
 	}
+	&:visited {}
+}
 
+
+
+
+
+
+
+
+// styles
+.btn_main {
+	background-color: $color_main;
+	color: #fff;
+	border: 1px solid transparent;
+	&:active,
+	&:visited 	{ color: #fff; }
+	&:hover 	{ background-color: darken($color_main, 8%) }
+	&:focus 	{}
+}
+
+.btn_secondary {
+	background-color: lightgray;
+	color: $color_font;
+	border: 1px solid transparent;
+	&:active,
+	&:visited 	{ color: $color_font; }
+	&:hover 	{ background-color: transparent; border:1px solid #b1b1b1; }
+	&:focus 	{}
+}
+
+.btn_outline {
+	background-color: #fff;
+	color: $color_main;
+	border: 1px solid $color_main;
+	&:active,
+	&:visited 	{ color: $color_main; }
+	&:hover 	{ background-color: $color_main; color: #fff; }
+	&:focus 	{}
 }
 
 .btn_add-to-cart {
+	background-color: #fff;
+	color: $color_main;
+	border: 1px solid $color_main;
+	&:active,
+	&:visited 	{ color: $color_main; }
+	&:hover 	{ background-color: $color_main; color: #fff; }
+	&:focus 	{}
+}
+
+.btn_icon {
 	position: relative;
-	flex: 1 1 50%;
 	text-align: center;
-	border: 2px solid $color_main;
-	padding: .8rem .8rem .8rem 4.5rem;
-	
-	text-transform: uppercase;
+
+	background-color: #fff;
+	color: $color_main;
+	border: 1px solid $color_main;
 	color: $color_main;
 
-	line-height: 2.2rem;
-
-	transition: $tr;
-
-
-	&:visited {color: $color_main;}
-	&:active {color: $color_main;}
-
-	&::before {
-		@include pseudo;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 3.7rem;
-		background-color: $color_main;
+	&:visited,
+	&:focus,
+	&:active {
+		color: $color_main;
 	}
 
-	&::after {
-		@include pseudo;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 3.7rem;
-		background-image: url(/img/icons/i-cart.png);
-		background-size: 1.7rem;
-		background-repeat: no-repeat;
-		background-position: 40% 50%;
-
+	&::before {
 		transition: $tr;
 	}
 
-	&:hover::after {
-		transform: scale(1.2);
+
+	&.btn_icon-cart 	{
+		&::before {
+			background: url(/img/icons/i-cart.png) $color_main center center no-repeat;
+		}
+		&:hover::before {
+			width: 100%;
+		}
+	}
+	&.btn_icon-call 	{
+		&::before {
+			background: url(/img/icons/i-phone.png) $color_main center center no-repeat;
+		}
+		&:hover::before {
+			width: 100%;
+		}
+	}
+	&.btn_icon-email 	{
+		&::before {
+			background: url(/img/icons/i-envelope.png) $color_main center center no-repeat;
+		}
+		&:hover::before {
+			width: 100%;
+		}
+	}
+	&.btn_icon-submit 	{
+		&::before {
+			background: url(/img/icons/i-submit.png) $color_main center center no-repeat;
+		}
+		&:hover::before {
+			width: 100%;
+		}
+	}
+
+	&.btn_size-l {
+		padding-left: 50px+$gutter*1.75 !important;
+		&::before {
+			@include pseudo;
+			left: 0;
+			top: 0;
+
+			height: 100%;
+			width: 50px;
+			background-size: 25px;
+		}
+	}
+	&.btn_size-m {
+		padding-left: 45px+$gutter*1.5 !important;
+		&::before {
+			@include pseudo;
+			left: 0;
+			top: 0;
+
+			height: 100%;
+			width: 45px;
+			background-size: 20px;
+		}
+	}
+	&.btn_size-s {
+		padding-left: 40px+$gutter*1.25 !important;
+		&::before {
+			@include pseudo;
+			left: 0;
+			top: 0;
+
+			height: 100%;
+			width: 40px;
+			background-size: 17px;
+		}
 	}
 
 	// &:hover::before {
@@ -71,101 +167,53 @@
 	// }
 }
 
-.btn_one-click {
-	flex: 1 1 50%;
-
-	@include flex-row(nowrap, flex-start, center);
-	background-color: transparent;
-
-	padding: .8rem .8rem .8rem .8rem;
-	border: 2px solid transparent;
-	line-height: 1.8rem;
-	transition: $tr;
-
-	font-size: 1.1rem;
-	text-transform: uppercase;
-
-	&:visited span {color: #514f53;}
-	&:active span {color: #514f53;}
-
-
-	span {
-		display: inline-block;
-		margin: 0 auto;
-		position: relative;
-
-		font-size: 1.2rem;
-		font-weight: 600;
-		text-transform: uppercase;
-		color: #514f53;
-		transition: $tr;
 
 
 
-		&::before {
-			@include pseudo;
-			width: 100%;
-			height: 1px;
-			left: 0;
-			bottom: -.5rem;
-			background-color: $color_font;
-			background-color: rgba(0,0,0,.1);
-		}
-	}
 
-	&:hover span::before {
-		display: none;
-	}
-	&:hover span {
-		color: #000;
-	}
-	&:hover {
-		background-color: #eaeaea;
-	}
 
+// sizes
+
+.btn_size-l {
+	@include font-kit(17px, 17px, 17px, 16px, 15px);
+	padding: $gutter/2 $gutter*1.75;
+}
+.btn_size-m {
+	@include font-kit(15px, 15px, 14px, 14px, 13px);
+	padding: $gutter/2.5 $gutter*1.5;
+}
+.btn_size-s {
+	@include font-kit(14px, 14px, 13px, 13px, 12px);
+	padding: $gutter/3 $gutter*1.25;
 }
 
 
-.btn_outline {
-	background-color: transparent;
-	border: 2px solid #e3e3e3;
-	color: $color_font;
 
-	transition: $tr;
+// burger button
 
-	&:visited,
-	&:active {
-		color: $color_font;
-	}
-
-	&:hover {
-		background-color: #e3e3e3;
-		color: #3e3d3d;
-	}
-
-}
 
 .btn-burger {
-	margin: 0 1.2rem 0 0;
-    float: left;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+	@include flex-col(nowrap, center, center);
+	width: 50px;
+	height: 44px;
+	margin: 0 0 0 0;
+	cursor: pointer;
     transition: 200ms;
 
-    
+    // change
+	background-color: black;
 }
-
 .btn-burger__bar {
 	position: relative;
-	width: 1.75rem;
+	width: 20px;
     height: 2px;
-    margin-bottom: .4rem;
+    margin-bottom: 5px;
     background-color: #fff;
     background-color: rgba(255,255,255,.6);
     transition: $tr;
     transform-origin: center, center;
+
+    	&:last-child { margin-bottom: 0; }
 
     	&:nth-child(1):after {
     		transition-delay: 100ms;
@@ -189,6 +237,70 @@
     	transition: $tr;
     }
 }
+
+
+
+
+
+
+
+
+// .btn_one-click {
+// 	flex: 1 1 50%;
+
+// 	@include flex-row(nowrap, flex-start, center);
+// 	background-color: transparent;
+
+// 	padding: .8rem .8rem .8rem .8rem;
+// 	border: 2px solid transparent;
+// 	line-height: 1.8rem;
+// 	transition: $tr;
+
+// 	font-size: 1.1rem;
+// 	text-transform: uppercase;
+
+// 	&:visited span {color: #514f53;}
+// 	&:active span {color: #514f53;}
+
+
+// 	span {
+// 		display: inline-block;
+// 		margin: 0 auto;
+// 		position: relative;
+
+// 		font-size: 1.2rem;
+// 		font-weight: 600;
+// 		text-transform: uppercase;
+// 		color: #514f53;
+// 		transition: $tr;
+
+
+
+// 		&::before {
+// 			@include pseudo;
+// 			width: 100%;
+// 			height: 1px;
+// 			left: 0;
+// 			bottom: -.5rem;
+// 			background-color: $color_font;
+// 			background-color: rgba(0,0,0,.1);
+// 		}
+// 	}
+
+// 	&:hover span::before {
+// 		display: none;
+// 	}
+// 	&:hover span {
+// 		color: #000;
+// 	}
+// 	&:hover {
+// 		background-color: #eaeaea;
+// 	}
+
+// }
+
+
+
 
 .btn_metal {
 	position: relative;

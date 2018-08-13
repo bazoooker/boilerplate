@@ -1,20 +1,8 @@
 .container {
-	width: 1260px;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto 0 auto;
 	padding: 0 $gutter;
+	// background: lightgray;
 }
 
-// @media screen and (max-width: 1400px) {
-// 	.container {
-// 		width: 95%;
-// 		padding: 0 2rem;
-// 	}
-// }
-
-@media screen and (max-width: 667px) {
-	.container {
-		width: 100%;
-		padding: 0 1rem;
-	}	
-}

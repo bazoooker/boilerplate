@@ -24,7 +24,7 @@
 @import "block/standard/template/page-footer";
 
 @import "block/standard/template/page-wrapper"; // block pushing footer to the bottom of the page
-@import "block/standard/template/page-content"; // <main class="page-content">
+@import "block/standard/template/content"; // <main class="page-content">
 
 @import "block/standard/template/container"; // centered container 1200px wide
 
@@ -41,16 +41,17 @@
 @import "block/standard/universal/checkbox/checkbox";
 @import "block/standard/universal/select/nice-select-prefixed";
 @import "block/standard/universal/cta/cta";
-@import "block/standard/universal/cta-stripe/cta-stripe";
 @import "block/standard/universal/dropdown/dropdown";
 @import "block/standard/universal/feature/feature";
 @import "block/standard/universal/hero/hero";
 @import "block/standard/universal/icon/icon";
 @import "block/standard/universal/legal/legal";
 @import "block/standard/universal/logo/logo";
-// @import "block/standard/universal/made-by/made-by";
+@import "block/standard/universal/made-by/made-by";
 @import "block/standard/universal/modal/modal";
+@import "block/standard/universal/modal/overlay";
 @import "block/standard/universal/nav/nav";
+@import "block/standard/universal/menu/menu";
 @import "block/standard/universal/pagination/pagination";
 @import "block/standard/universal/photo/photo";
 @import "block/standard/universal/search/search";

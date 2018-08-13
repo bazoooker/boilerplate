@@ -1,6 +1,13 @@
+
+// список ссылок
+// 	горизонтальный
+// 	вертикальный
+// 	с дропдауном
+
 .nav {
 	@include flex-row(nowrap, flex-start, center);
 	z-index: 2;
+
 	a {
 		position: relative;
 		margin: 0 0 0 0;
@@ -18,19 +25,6 @@
 			margin-right: 0;
 		}
 
-		// &:before  {
-		// 	@include pseudo;
-		// 	left: .6rem;
-		// 	top: 50%;
-		// 	transform: translateY(-50%);
-		// 	background-size: 17px;
-		// 	background-repeat: no-repeat;
-		// 	background-position: 50% 50%;
-		// 	@include bg-contain;
-
-		// 	transition: $tr;
-		// }
-
 		&::after {
 			@include pseudo;
 			width: 100%;
@@ -47,18 +41,9 @@
 		&:hover {
 			color: $color_main;
 		}
-		
-		// &:hover::before {
-		// 	transform: translateY(-60%);
-		// }
 
-		// &:hover::after {
-		// 	opacity: .15;
-		// 	transform: translateY(0);
-		// }
 		&.active {
 			font-weight: 600;
 		}
-
 	}
 }

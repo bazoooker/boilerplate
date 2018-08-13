@@ -28,16 +28,13 @@ html {
 body {
     height: 100%;
     margin: 0;
+    background: #efefef;
+
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
-
-h1 {
-  margin: 0.67em 0;
-}
-
 
 hr {
   box-sizing: content-box; /* 1 */
@@ -108,6 +105,7 @@ textarea {
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
+  
 }
 
 button,
@@ -124,7 +122,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  appearance: none;
 }
 
 button::-moz-focus-inner,
@@ -209,21 +207,23 @@ footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
+ 
+section{
+    h1:first-child, 
+    h2:first-child, 
+    h3:first-child,
+    h4:first-child,
+    h5:first-child,
+    h6:first-child {
+        margin-top: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+}
+
 
 .gmnoprint {
   display: none;
-}
-
-
-
-@media screen and (min-width: 568px) and (max-width: 768px) {
-  .popup {
-    max-width: 350px;
-  }
-}
-
-@media screen and (min-width: 1px) and (max-width: 567px) {
-  .popup {
-    max-width: 256px;
-  }
 }

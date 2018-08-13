@@ -30,3 +30,48 @@
     background-repeat: no-repeat;
 }
 
+
+
+// fonts
+
+@mixin font-kit($base-font, $font-1200, $font-992, $font-768, $font-568) {
+    font-size: $base-font;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $font-1200;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $font-992;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $font-768;
+    }
+
+    @media screen and (max-width: 568px) {
+        font-size: $font-568;
+    }
+}
+
+@mixin line-height-kit($base-line-height, $line-height-1200, $line-height-992, $line-height-768, $line-height-568) {
+    line-height: $base-line-height;
+
+    @media screen and (max-width: 1200px) {
+        line-height: $line-height-1200;
+    }
+
+    @media screen and (max-width: 992px) {
+        line-height: $line-height-992;
+    }
+
+    @media screen and (max-width: 768px) {
+        line-height: $line-height-768;
+    }
+
+    @media screen and (max-width: 568px) {
+        line-height: $line-height-568;
+    }
+}
+
+

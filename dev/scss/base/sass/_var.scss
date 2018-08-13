@@ -1,6 +1,6 @@
 
 // colors
-$color_main: #e65d00;
+$color_main: #66ccff;
 
 
 $color_main-r: #c32429;
@@ -21,7 +21,17 @@ $color_blue-l: #4ba1d2;
 
 $color_font: #323232;
 
+
+// fonts
+
+$p: 16px;
+
+// grid
+$col-width: 100% / 12;
+
+
+
 // gutters
-$gutter: 4rem;
+$gutter: 20px;
 
 $tr: 250ms;

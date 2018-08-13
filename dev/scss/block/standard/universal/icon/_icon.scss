@@ -18,24 +18,24 @@
 	}
 }
 
-.icon-home {
-	display: inline-block;
-	margin: 0 .3rem -.3rem 0;
-	width: 1.7rem;
-	height: 1.7rem;
-	background-image: url(/img/icons/home.png);
-	@include bg-contain;
-}
+// .icon-home {
+// 	display: inline-block;
+// 	margin: 0 .3rem -.3rem 0;
+// 	width: 1.7rem;
+// 	height: 1.7rem;
+// 	background-image: url(/img/icons/home.png);
+// 	@include bg-contain;
+// }
 
 
-.icon_help {
-	background-color: transparent;
-	margin: 0 auto 2rem auto;
-	&::after {
-		width: 100%;
-		height: 100%;
-		background-image: url(/img/icons/i-question.png);
-		@include bg-contain;
-		opacity: .5;
-	}
-}
+// .icon_help {
+// 	background-color: transparent;
+// 	margin: 0 auto 2rem auto;
+// 	&::after {
+// 		width: 100%;
+// 		height: 100%;
+// 		background-image: url(/img/icons/i-question.png);
+// 		@include bg-contain;
+// 		opacity: .5;
+// 	}
+// }
